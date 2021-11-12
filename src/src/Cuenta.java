@@ -11,6 +11,9 @@ package src;
  */
 public class Cuenta {
     private float balance;
+    public Cuenta(){
+        this.balance = 50;
+    }
     public void sacarDinero(float dinero){
         
     }
