@@ -5,6 +5,8 @@
  */
 package src;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import junit.framework.TestCase;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -43,10 +45,14 @@ public class CuentaTest extends TestCase{
      */
     @Test
     public void testSacarDinero() {
-        System.out.println("sacarDinero");
-        float dinero = 0.0F;
-        Cuenta instance = new Cuenta();
-        instance.sacarDinero(dinero);
+        try {
+            System.out.println("sacarDinero");
+            float dinero = 0.0F;
+            Cuenta instance = new Cuenta();
+            instance.sacarDinero(dinero);
+        } catch (Exception ex) {
+            Logger.getLogger(CuentaTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -54,10 +60,14 @@ public class CuentaTest extends TestCase{
      */
     @Test
     public void testMeterDinero() {
-        System.out.println("meterDinero");
-        float dinero = 0.0F;
-        Cuenta instance = new Cuenta();
-        instance.meterDinero(dinero);
+        try {
+            System.out.println("meterDinero");
+            float dinero = 0.0F;
+            Cuenta instance = new Cuenta();
+            instance.meterDinero(dinero);
+        } catch (Exception ex) {
+            Logger.getLogger(CuentaTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
 }
