@@ -18,8 +18,8 @@ public class Cuenta {
         return this.balance;
     }
     public void sacarDinero(float dinero) throws Exception{
-        if(dinero > this.balance){
-            throw new Exception("No hay dinero suficiente.");
+        if(this.balance - dinero < -500){
+            throw new Exception("No se puede sacar más dinero.");
         } else if(dinero <= 0){
             throw new Exception("Introduzca una cantidad válida de dinero.");
         } else{
