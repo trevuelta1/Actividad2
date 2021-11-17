@@ -44,7 +44,7 @@ public class CuentaTest extends TestCase{
      * Test of sacarDinero method, of class Cuenta.
      */
     @Test
-    public void cuenta12345() {
+    public void testCuenta12345() {
         try {
             System.out.println("Cuenta #12345");
             Cuenta instance = new Cuenta();
@@ -57,11 +57,9 @@ public class CuentaTest extends TestCase{
         }
     }
 
-    /**
-     * Test of meterDinero method, of class Cuenta.
-     */
+
     @Test
-    public void cuenta67890() {
+    public void testCuenta67890() {
         try {
             System.out.println("Cuenta #67890");
             Cuenta instance = new Cuenta();
