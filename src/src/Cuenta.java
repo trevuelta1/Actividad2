@@ -14,10 +14,23 @@ public class Cuenta {
     public Cuenta(){
         this.balance = 50;
     }
-    public void sacarDinero(float dinero){
-        
+    public float getBalance(){
+        return this.balance;
     }
-    public void meterDinero(float dinero){
-        
+    public void sacarDinero(float dinero) throws Exception{
+        if(dinero > this.balance){
+            throw new Exception("No hay dinero suficiente.");
+        } else if(dinero <= 0){
+            throw new Exception("Introduzca una cantidad válida de dinero.");
+        } else{
+            this.balance = this.balance - dinero;
+        }
+    }
+    public void meterDinero(float dinero) throws Exception{
+        if(dinero <= 0){
+            throw new Exception("Introduzca una cantidad válida de dinero.");
+        } else{
+            this.balance = this.balance + dinero;
+        }
     }
 }
