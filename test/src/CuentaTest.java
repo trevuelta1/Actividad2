@@ -44,12 +44,14 @@ public class CuentaTest extends TestCase{
      * Test of sacarDinero method, of class Cuenta.
      */
     @Test
-    public void testSacarDinero() {
+    public void cuenta12345() {
         try {
-            System.out.println("sacarDinero");
-            float dinero = 0.0F;
+            System.out.println("Cuenta #12345");
             Cuenta instance = new Cuenta();
-            instance.sacarDinero(dinero);
+            instance.sacarDinero(200);
+            instance.meterDinero(100);
+            instance.sacarDinero(200);
+            System.out.println("Balance: " + instance.getBalance() + "€");
         } catch (Exception ex) {
             Logger.getLogger(CuentaTest.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -59,12 +61,16 @@ public class CuentaTest extends TestCase{
      * Test of meterDinero method, of class Cuenta.
      */
     @Test
-    public void testMeterDinero() {
+    public void cuenta67890() {
         try {
-            System.out.println("meterDinero");
-            float dinero = 0.0F;
+            System.out.println("Cuenta #67890");
             Cuenta instance = new Cuenta();
-            instance.meterDinero(dinero);
+            instance.sacarDinero(350);
+            instance.sacarDinero(200);
+            instance.sacarDinero(150);
+            instance.meterDinero(50);
+            instance.sacarDinero(100);
+            System.out.println("Balance: " + instance.getBalance() + "€");
         } catch (Exception ex) {
             Logger.getLogger(CuentaTest.class.getName()).log(Level.SEVERE, null, ex);
         }
